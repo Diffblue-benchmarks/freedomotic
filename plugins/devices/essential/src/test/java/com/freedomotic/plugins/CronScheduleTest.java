@@ -1,3 +1,23 @@
+/**
+ *
+ * Copyright (c) 2009-2018 Freedomotic team http://freedomotic.com
+ *
+ * This file is part of Freedomotic
+ *
+ * This Program is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation; either version 2, or (at your option) any later version.
+ *
+ * This Program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * Freedomotic; see the file COPYING. If not, see
+ * <http://www.gnu.org/licenses/>.
+ */
+
 package com.freedomotic.plugins;
 
 import java.time.LocalDateTime;
@@ -5,6 +25,10 @@ import java.time.Month;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import com.freedomotic.plugins.CronSchedule.SingleTimeValue;
+import com.freedomotic.plugins.CronSchedule.TimeSteps;
+import com.freedomotic.plugins.CronSchedule.TimeRange;
 
 /**
  * Tests for the {@link CronSchedule}.
@@ -88,4 +112,78 @@ public final class CronScheduleTest {
 		final LocalDateTime noMatch1 = LocalDateTime.of(2017, Month.DECEMBER, 26, 0, 0);
 		Assert.assertFalse(schedule.matches(noMatch1));	
 	}
+
+	@Test
+	public void matchesInputNegativeOutputTrue() {
+  
+	  // Arrange
+	  final TimeRange objectUnderTest = new TimeRange(-2_147_483_647, 16_777_217);
+	  final int timeValue = -2_130_706_432;
+  
+	  // Act
+	  final boolean retval = objectUnderTest.matches(timeValue);
+  
+	  // Assert result
+	  Assert.assertEquals(true, retval);
+	}
+
+	@Test
+	public void matchesInputZeroOutputFalse() {
+  
+	  // Arrange
+	  final SingleTimeValue cronSchedule$SingleTimeValue = new SingleTimeValue(1);
+	  final TimeSteps objectUnderTest = new TimeSteps(cronSchedule$SingleTimeValue, 0);
+	  final int timeValue = 0;
+  
+	  // Act
+	  final boolean retval = objectUnderTest.matches(timeValue);
+  
+	  // Assert result
+	  Assert.assertEquals(false, retval);
+	}
+
+	@Test
+	public void matchesInputZeroOutputFalse2() {
+  
+	  // Arrange
+	  final TimeRange objectUnderTest = new TimeRange(0, -2_147_483_647);
+	  final int timeValue = 0;
+  
+	  // Act
+	  final boolean retval = objectUnderTest.matches(timeValue);
+  
+	  // Assert result
+	  Assert.assertEquals(false, retval);
+	}
+
+	@Test
+	public void matchesInputZeroOutputFalse3() {
+  
+	  // Arrange
+	  final SingleTimeValue objectUnderTest = new SingleTimeValue(1);
+	  final int timeValue = 0;
+  
+	  // Act
+	  final boolean retval = objectUnderTest.matches(timeValue);
+  
+	  // Assert result
+	  Assert.assertEquals(false, retval);
+	}
+
+	@Test
+	public void matchesInputZeroOutputTrue() {
+  
+	  // Arrange
+	  final SingleTimeValue cronSchedule$SingleTimeValue = new SingleTimeValue(0);
+	  final TimeSteps objectUnderTest = new TimeSteps(cronSchedule$SingleTimeValue, -1_073_741_824);
+	  final int timeValue = 0;
+  
+	  // Act
+	  final boolean retval = objectUnderTest.matches(timeValue);
+  
+	  // Assert result
+	  Assert.assertEquals(true, retval);
+	}
+
 }
+
