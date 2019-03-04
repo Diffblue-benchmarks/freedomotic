@@ -2,174 +2,198 @@ cbmcArguments:
   do-not-test-methods-with-access: [ private ]
   cover-function-only: false
 units:
-  # Target Coverage: 18.0%
+  # Target Coverage: 8.8%
   - target:
       - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/environment/Room.class
+        file: com/freedomotic/things/EnvObjectLogic.class
         sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/environment/Room.java
-      # Child of Room.class
+        sourceFile: com/freedomotic/things/EnvObjectLogic.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 11.8%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/behaviors/BehaviorLogic.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/behaviors/BehaviorLogic.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 66.1%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/core/Resolver.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/core/Resolver.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 0.0%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/core/SynchAction.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/core/SynchAction.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 0.0%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/core/SynchThingRequest.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/core/SynchThingRequest.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 45.3%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/environment/EnvironmentLogic.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/environment/EnvironmentLogic.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 42.6%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/environment/EnvironmentRepository.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/environment/EnvironmentRepository.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 33.3%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/environment/ZoneLogic.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/environment/ZoneLogic.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 0.0%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/events/ObjectHasChangedBehavior.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/events/ObjectHasChangedBehavior.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 50.0%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/exceptions/FreedomoticRuntimeException.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/exceptions/FreedomoticRuntimeException.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 0.0%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/exceptions/VariableResolutionException.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/exceptions/VariableResolutionException.java
+      # Child of EnvObjectLogic.class
       # Child Coverage: 0.0%
       - dir: framework/freedomotic-model/target/classes
-        file: com/freedomotic/model/environment/Zone.class
+        file: com/freedomotic/model/ds/Config.class
         sourceDir: framework/freedomotic-model/src/main/java
-        sourceFile: com/freedomotic/model/environment/Zone.java
-      # Child of Room.class
+        sourceFile: com/freedomotic/model/ds/Config.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 46.9%
+      - dir: framework/freedomotic-model/target/classes
+        file: com/freedomotic/model/geometry/FreedomPolygon.class
+        sourceDir: framework/freedomotic-model/src/main/java
+        sourceFile: com/freedomotic/model/geometry/FreedomPolygon.java
+      # Child of EnvObjectLogic.class
       # Child Coverage: Unknown %
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/things/GenericGate.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/things/GenericGate.java
-  # Target Coverage: 22.2%
-  - target:
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/reactions/CommandRepositoryImpl.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/reactions/CommandRepositoryImpl.java
-      # Child of CommandRepositoryImpl.class
-      # Child Coverage: 50.0%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/app/Freedomotic.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/app/Freedomotic.java
-      # Child of CommandRepositoryImpl.class
-      # Child Coverage: 28.7%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/bus/BusService.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/bus/BusService.java
-      # Child of CommandRepositoryImpl.class
+      - dir: framework/freedomotic-model/target/classes
+        file: com/freedomotic/model/geometry/FreedomShape.class
+        sourceDir: framework/freedomotic-model/src/main/java
+        sourceFile: com/freedomotic/model/geometry/FreedomShape.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 13.3%
+      - dir: framework/freedomotic-model/target/classes
+        file: com/freedomotic/model/object/EnvObject.class
+        sourceDir: framework/freedomotic-model/src/main/java
+        sourceFile: com/freedomotic/model/object/EnvObject.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 0.0%
+      - dir: framework/freedomotic-model/target/classes
+        file: com/freedomotic/model/object/Representation.class
+        sourceDir: framework/freedomotic-model/src/main/java
+        sourceFile: com/freedomotic/model/object/Representation.java
+      # Child of EnvObjectLogic.class
       # Child Coverage: 90.0%
       - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/events/CommandHasChanged.class
+        file: com/freedomotic/reactions/Command.class
         sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/events/CommandHasChanged.java
-      # Child of CommandRepositoryImpl.class
+        sourceFile: com/freedomotic/reactions/Command.java
+      # Child of EnvObjectLogic.class
       # Child Coverage: 0.0%
       - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/exceptions/DataUpgradeException.class
+        file: com/freedomotic/reactions/Reaction.class
         sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/exceptions/DataUpgradeException.java
-      # Child of CommandRepositoryImpl.class
-      # Child Coverage: 50.0%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/exceptions/RepositoryException.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/exceptions/RepositoryException.java
-      # Child of CommandRepositoryImpl.class
-      # Child Coverage: 67.6%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/persistence/DataUpgradeService.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/persistence/DataUpgradeService.java
-      # Child of CommandRepositoryImpl.class
-      # Child Coverage: 93.1%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/persistence/FreedomXStream.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/persistence/FreedomXStream.java
-      # Child of CommandRepositoryImpl.class
-      # Child Coverage: 75.0%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/persistence/XmlPreprocessor.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/persistence/XmlPreprocessor.java
-      # Child of CommandRepositoryImpl.class
-      # Child Coverage: 44.6%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/settings/Info.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/settings/Info.java
-  # Target Coverage: 11.0%
-  - target:
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/reactions/TriggerRepositoryImpl.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/reactions/TriggerRepositoryImpl.java
-      # Child of TriggerRepositoryImpl.class
+        sourceFile: com/freedomotic/reactions/Reaction.java
+      # Child of EnvObjectLogic.class
       # Child Coverage: 80.0%
       - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/events/TriggerHasChanged.class
+        file: com/freedomotic/reactions/Trigger.class
         sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/events/TriggerHasChanged.java
-  # Target Coverage: 5.0%
+        sourceFile: com/freedomotic/reactions/Trigger.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 85.4%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/rules/Statement.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/rules/Statement.java
+      # Child of EnvObjectLogic.class
+      # Child Coverage: 50.4%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/util/TopologyUtils.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/util/TopologyUtils.java
+  # Target Coverage: 26.2%
   - target:
       - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/plugins/impl/PluginsManagerImpl.class
+        file: com/freedomotic/things/impl/ThingRepositoryImpl.class
         sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/plugins/impl/PluginsManagerImpl.java
-      # Child of PluginsManagerImpl.class
-      # Child Coverage: 60.0%
+        sourceFile: com/freedomotic/things/impl/ThingRepositoryImpl.java
+      # Child of ThingRepositoryImpl.class
+      # Child Coverage: 8.8%
       - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/api/Client.class
+        file: com/freedomotic/things/EnvObjectLogic.class
         sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/api/Client.java
-      # Child of PluginsManagerImpl.class
-      # Child Coverage: 42.9%
+        sourceFile: com/freedomotic/things/EnvObjectLogic.java
+      # Child of ThingRepositoryImpl.class
+      # Child Coverage: 73.7%
       - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/api/Plugin.class
+        file: com/freedomotic/things/ThingFactory.class
         sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/api/Plugin.java
-      # Child of PluginsManagerImpl.class
+        sourceFile: com/freedomotic/things/ThingFactory.java
+      # Child of ThingRepositoryImpl.class
+      # Child Coverage: 26.2%
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/things/ThingRepository.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/things/ThingRepository.java
+      # Child of ThingRepositoryImpl.class
       # Child Coverage: 0.0%
       - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/exceptions/PluginLoadingException.class
+        file: com/freedomotic/util/SerialClone.class
         sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/exceptions/PluginLoadingException.java
-      # Child of PluginsManagerImpl.class
-      # Child Coverage: 13.5%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/i18n/I18n.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/i18n/I18n.java
-      # Child of PluginsManagerImpl.class
-      # Child Coverage: 60.0%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/plugins/ClientStorage.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/plugins/ClientStorage.java
-      # Child of PluginsManagerImpl.class
-      # Child Coverage: 5.0%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/plugins/PluginsManager.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/plugins/PluginsManager.java
-      # Child of PluginsManagerImpl.class
-      # Child Coverage: 22.2%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/reactions/CommandRepository.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/reactions/CommandRepository.java
-      # Child of PluginsManagerImpl.class
-      # Child Coverage: 3.1%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/reactions/ReactionRepository.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/reactions/ReactionRepository.java
-      # Child of PluginsManagerImpl.class
-      # Child Coverage: 11.0%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/reactions/TriggerRepository.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/reactions/TriggerRepository.java
-      # Child of PluginsManagerImpl.class
-      # Child Coverage: 77.1%
-      - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/util/Unzip.class
-        sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/util/Unzip.java
-  # Target Coverage: 13.5%
+        sourceFile: com/freedomotic/util/SerialClone.java
+  # Target Coverage: 42.6%
   - target:
       - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/i18n/I18nImpl.class
+        file: com/freedomotic/environment/impl/EnvironmentRepositoryImpl.class
         sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/i18n/I18nImpl.java
-      # Child of I18nImpl.class
-      # Child Coverage: 23.7%
+        sourceFile: com/freedomotic/environment/impl/EnvironmentRepositoryImpl.java
+      # Child of EnvironmentRepositoryImpl.class
+      # Child Coverage: 78.3%
+      - dir: framework/freedomotic-model/target/classes
+        file: com/freedomotic/model/environment/Environment.class
+        sourceDir: framework/freedomotic-model/src/main/java
+        sourceFile: com/freedomotic/model/environment/Environment.java
+      # Child of EnvironmentRepositoryImpl.class
+      # Child Coverage: 0.0%
       - dir: framework/freedomotic-core/target/classes
-        file: com/freedomotic/settings/AppConfig.class
+        file: com/freedomotic/util/UidGenerator.class
         sourceDir: framework/freedomotic-core/src/main/java
-        sourceFile: com/freedomotic/settings/AppConfig.java
+        sourceFile: com/freedomotic/util/UidGenerator.java
+  # Target Coverage: 41.2%
+  - target:
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/bus/BusMessagesListener.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/bus/BusMessagesListener.java
+  # Target Coverage: 7.1%
+  - target:
+      - dir: framework/freedomotic-core/target/classes
+        file: com/freedomotic/persistence/TupleConverter.class
+        sourceDir: framework/freedomotic-core/src/main/java
+        sourceFile: com/freedomotic/persistence/TupleConverter.java
+      # Child of TupleConverter.class
+      # Child Coverage: 5.9%
+      - dir: framework/freedomotic-model/target/classes
+        file: com/freedomotic/model/ds/Tuples.class
+        sourceDir: framework/freedomotic-model/src/main/java
+        sourceFile: com/freedomotic/model/ds/Tuples.java
 phases:
   -
     #0
