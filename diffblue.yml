@@ -1,6 +1,4 @@
 cbmcArguments:
-  do-not-test-methods-with-access: [ private ]
-  cover-function-only: false
 units:
   # Target Coverage: Unknown %
   - target:
@@ -38,7 +36,6 @@ units:
         file: com/freedomotic/model/geometry/FreedomShape.class
         sourceDir: framework/freedomotic-model/src/main/java
         sourceFile: com/freedomotic/model/geometry/FreedomShape.java
-Writing units to: /Users/paulkent/Sites/customer-experience/unit_generator/diffblue_units.yml
 phases:
   -
     #0
