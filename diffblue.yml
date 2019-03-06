@@ -1,6 +1,6 @@
 cbmcArguments:
-cover-function-only: false
-cover-include-pattern: .*(com\.freedomotic\.util\.TopologyUtils).*
+  cover-function-only: false
+  cover-include-pattern: .*(com\.freedomotic\.util\.TopologyUtils).*
 phases:
   -
     #0
