@@ -1,5 +1,7 @@
 cbmcArguments:
+  do-not-test-methods-with-access: [ private ]
   cover-function-only: false
+  cover-only: file
 units:
   # Target Coverage: Unknown %
   - target:
