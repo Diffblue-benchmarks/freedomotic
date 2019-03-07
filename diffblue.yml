@@ -1,6 +1,42 @@
 cbmcArguments:
   cover-function-only: false
-  cover-include-pattern: .*(com\.freedomotic\.util\.TopologyUtils).*
+units:
+  # Target Coverage: Unknown %
+  - target:
+    - dir: framework/freedomotic-core/target/classes
+      file: com/freedomotic/util/TopologyUtils.class
+      sourceDir: framework/freedomotic-core/src/main/java
+      sourceFile: com/freedomotic/util/TopologyUtils.java
+    # Child of TopologyUtils.class
+    # Child Coverage: Unknown %
+    - dir: framework/freedomotic-model/target/classes
+      file: com/freedomotic/model/geometry/FreedomColor.class
+      sourceDir: framework/freedomotic-model/src/main/java
+      sourceFile: com/freedomotic/model/geometry/FreedomColor.java
+    # Child of TopologyUtils.class
+    # Child Coverage: Unknown %
+    - dir: framework/freedomotic-model/target/classes
+      file: com/freedomotic/model/geometry/FreedomEllipse.class
+      sourceDir: framework/freedomotic-model/src/main/java
+      sourceFile: com/freedomotic/model/geometry/FreedomEllipse.java
+    # Child of TopologyUtils.class
+    # Child Coverage: Unknown %
+    - dir: framework/freedomotic-model/target/classes
+      file: com/freedomotic/model/geometry/FreedomShape.class
+      sourceDir: framework/freedomotic-model/src/main/java
+      sourceFile: com/freedomotic/model/geometry/FreedomShape.java
+    # Child of TopologyUtils.class
+    # Child Coverage: Unknown %
+    - dir: framework/freedomotic-model/target/classes
+      file: com/freedomotic/model/geometry/FreedomPoint.class
+      sourceDir: framework/freedomotic-model/src/main/java
+      sourceFile: com/freedomotic/model/geometry/FreedomPoint.java
+    # Child of TopologyUtils.class
+    # Child Coverage: Unknown %
+    - dir: framework/freedomotic-model/target/classes
+      file: com/freedomotic/model/geometry/FreedomPolygon.class
+      sourceDir: framework/freedomotic-model/src/main/java
+      sourceFile: com/freedomotic/model/geometry/FreedomPolygon.java
 phases:
   -
     #0
